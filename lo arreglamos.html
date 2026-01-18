@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Lo siento de verdad</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(120deg, #ff9a9e, #fad0c4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 25px;
+      padding: 40px 30px;
+      max-width: 420px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+      animation: aparecer 1.2s ease;
+    }
+
+    @keyframes aparecer {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 32px;
+      color: #e63946;
+    }
+
+    p {
+      font-size: 18px;
+      color: #444;
+      line-height: 1.6;
+      margin: 20px 0;
+    }
+
+    .boton {
+      margin-top: 25px;
+      padding: 14px 30px;
+      font-size: 17px;
+      border: none;
+      border-radius: 30px;
+      background: linear-gradient(135deg, #e63946, #ff6b6b);
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 10px 20px rgba(230,57,70,0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .boton:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 30px rgba(230,57,70,0.5);
+    }
+
+    .mensaje-final {
+      display: none;
+      margin-top: 30px;
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .corazon {
+      font-size: 50px;
+      margin-top: 15px;
+      animation: latido 1.2s infinite;
+    }
+
+    @keyframes latido {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.25); }
+      100% { transform: scale(1); }
+    }
+
+    .footer {
+      margin-top: 25px;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Perdón…</h1>
+
+    <p>
+      Perdón por lo que dije,<br>
+      no era en serio.<br><br>
+      A veces hablo sin pensar,<br>
+      por eso perdoname y arreglemos las cosas
+    </p>
+
+    <button class="boton" onclick="mostrar()">
+      ¿Podemos arreglar las cosas?
+    </button>
+
+    <div id="final" class="mensaje-final">
+      <p>
+        Me importas más de lo que imaginas.<br>
+        Quiero hacerlo bien contigo 🤍
+      </p>
+      <div class="corazon">❤️</div>
+      <div class="footer">
+        Gracias por leer hasta aquí
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function mostrar() {
+      document.getElementById("final").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
